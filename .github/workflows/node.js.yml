@@ -17,12 +17,11 @@ jobs:
       - name: npm install and build webpack
         run: |
           npm install
-          npm run build
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [14.x, 16.x]
         os: [window-2019, ubuntu-latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
