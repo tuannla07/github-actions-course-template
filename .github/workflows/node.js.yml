@@ -17,6 +17,10 @@ jobs:
       - name: npm install and build webpack
         run: |
           npm install
+      - uses: actions/upload-artifact@v3.1.2
+        with:
+          name: webpack artifact
+          path: public/
   test:
     runs-on: ubuntu-latest
     strategy:
